@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="CORS的简介">
+
+
+
+
+  <meta name="keywords" content="CORS,">
+
+
+
+
+
+  <link rel="alternate" href="/default" title="null">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1">
+
+
+
+<link rel="canonical" href="https://techmessage.github.io/2019/07/04/CORS的简介/">
+
+
+<meta name="description" content="学习顺便翻译MDN原文 概述 CORS (cross-origin resources sharing) (跨域资源共享) 是一机制：可以在http请求中的headers中添加字段来然浏览器获取访问跨域资源的能力。   是一种机制 浏览器的行为 解决的是跨域访问资源问题 主要是后端的接口相应要设置相应的header 字段： Access-Control-Allow-Origin   前提  Q:">
+<meta name="keywords" content="CORS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CORS的简介">
+<meta property="og:url" content="https://techmessage.github.io/2019/07/04/CORS的简介/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="学习顺便翻译MDN原文 概述 CORS (cross-origin resources sharing) (跨域资源共享) 是一机制：可以在http请求中的headers中添加字段来然浏览器获取访问跨域资源的能力。   是一种机制 浏览器的行为 解决的是跨域访问资源问题 主要是后端的接口相应要设置相应的header 字段： Access-Control-Allow-Origin   前提  Q:">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-26T00:56:10.291Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CORS的简介">
+<meta name="twitter:description" content="学习顺便翻译MDN原文 概述 CORS (cross-origin resources sharing) (跨域资源共享) 是一机制：可以在http请求中的headers中添加字段来然浏览器获取访问跨域资源的能力。   是一种机制 浏览器的行为 解决的是跨域访问资源问题 主要是后端的接口相应要设置相应的header 字段： Access-Control-Allow-Origin   前提  Q:">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> CORS的简介 -  </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo"></a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          CORS的简介
+        
+      </h1>
+
+      <time class="post-time">
+          Jul 04 2019
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h2 id="学习顺便翻译"><a href="#学习顺便翻译" class="headerlink" title="学习顺便翻译"></a>学习顺便翻译</h2><p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank" rel="noopener">MDN原文</a></p>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><blockquote>
+<p>CORS (cross-origin resources sharing) (跨域资源共享) 是一机制：可以在http请求中的headers中添加字段来然浏览器获取访问跨域资源的能力。</p>
+</blockquote>
+<ol>
+<li>是一种机制</li>
+<li>浏览器的行为</li>
+<li>解决的是跨域访问资源问题</li>
+<li>主要是后端的接口相应要设置相应的header 字段： Access-Control-Allow-Origin</li>
+</ol>
+<blockquote>
+<p>前提</p>
+</blockquote>
+<p>Q:  何为跨域？<br>A:  a网站的客户端页面脚本中 访问了b网站的资源； a和b不同域名，不同端口，不同协议，三者满足其一视为跨域   </p>
+<p>Q:  为何需要解决跨域问题？<br>A:  出于安全的考虑，浏览器默认是进制客户端脚本跨域访问资源，XMLHttpRequest遵循<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy" target="_blank" rel="noopener">同源策源</a> </p>
+<p>Q:  cors解决了啥？<br>A:  基于上面的问题，cors的机制就是在response的headers中添加特定的字段，允许不同域的客户端访问</p>
+<p>Q:  需要用到cors的http请求资源的类型？ </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A:  1.基于XMLHttpRequest的ajax请求</span><br><span class="line">    2.css中@font-face引入别人的字体</span><br><span class="line">    3.WebGL texture</span><br><span class="line">    4.canvas 调用 drawImage()</span><br></pre></td></tr></table></figure>
+
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/CORS/">CORS</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2019/07/24/typescript/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">typescript</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2019/07/03/vue-cli3-x/">
+        <span class="next-text nav-default">vue-cli3.x</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2019
+    <span class="footer-author">TechMessage.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>

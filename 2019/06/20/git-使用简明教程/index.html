@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="git 使用简明教程">
+
+
+
+
+  <meta name="keywords" content="git,">
+
+
+
+
+
+  <link rel="alternate" href="/default" title="null">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1">
+
+
+
+<link rel="canonical" href="https://techmessage.github.io/2019/06/20/git-使用简明教程/">
+
+
+<meta name="description" content="Git 快速上手教程 旨在快速上手使用开发  git 的由来和理念分布式vs集中式 1 安装和配置git安装配置 2 使用步骤 本地开启git版本管理库，简单的立即为本地版本库，该库管理目录下所有文件的修改记录，可以回退。   在目标目录下  git init   需要明确一点，git版本控制系统只能追踪 文本类型的文件 的变化，比如某个.js文件的修改，第10行添加了一行代码，第5行注释等等，对">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git 使用简明教程">
+<meta property="og:url" content="https://techmessage.github.io/2019/06/20/git-使用简明教程/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="Git 快速上手教程 旨在快速上手使用开发  git 的由来和理念分布式vs集中式 1 安装和配置git安装配置 2 使用步骤 本地开启git版本管理库，简单的立即为本地版本库，该库管理目录下所有文件的修改记录，可以回退。   在目标目录下  git init   需要明确一点，git版本控制系统只能追踪 文本类型的文件 的变化，比如某个.js文件的修改，第10行添加了一行代码，第5行注释等等，对">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://techmessage.github.io/images/Snipaste_2019-06-14_23-11-14.png">
+<meta property="og:image" content="https://techmessage.github.io/images/Snipaste_2019-06-15_00-09-30.png">
+<meta property="og:updated_time" content="2019-07-26T00:56:10.291Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git 使用简明教程">
+<meta name="twitter:description" content="Git 快速上手教程 旨在快速上手使用开发  git 的由来和理念分布式vs集中式 1 安装和配置git安装配置 2 使用步骤 本地开启git版本管理库，简单的立即为本地版本库，该库管理目录下所有文件的修改记录，可以回退。   在目标目录下  git init   需要明确一点，git版本控制系统只能追踪 文本类型的文件 的变化，比如某个.js文件的修改，第10行添加了一行代码，第5行注释等等，对">
+<meta name="twitter:image" content="https://techmessage.github.io/images/Snipaste_2019-06-14_23-11-14.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> git 使用简明教程 -  </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo"></a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          git 使用简明教程
+        
+      </h1>
+
+      <time class="post-time">
+          Jun 20 2019
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h1 id="Git-快速上手教程"><a href="#Git-快速上手教程" class="headerlink" title="Git 快速上手教程"></a>Git 快速上手教程</h1><blockquote>
+<p>旨在快速上手使用开发</p>
+</blockquote>
+<h2 id="git-的由来和理念"><a href="#git-的由来和理念" class="headerlink" title="git 的由来和理念"></a>git 的由来和理念</h2><p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/896202780297248" target="_blank" rel="noopener">分布式vs集中式</a></p>
+<h2 id="1-安装和配置git"><a href="#1-安装和配置git" class="headerlink" title="1 安装和配置git"></a>1 安装和配置git</h2><p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/896067074338496" target="_blank" rel="noopener">安装配置</a></p>
+<h2 id="2-使用步骤"><a href="#2-使用步骤" class="headerlink" title="2 使用步骤"></a>2 使用步骤</h2><ol>
+<li><p>本地开启git版本管理库，简单的立即为本地版本库，该库管理目录下所有文件的修改记录，可以回退。</p>
+<blockquote>
+<p> <strong><em>在目标目录下  git init</em></strong></p>
+</blockquote>
+</li>
+<li><p>需要明确一点，git版本控制系统只能追踪 <strong><em>文本类型的文件</em></strong> 的变化，比如某个.js文件的修改，第10行添加了一行代码，第5行注释等等，对于媒体等2进制文件是不能追踪到文件的变化的。不幸的是office文件都是二进制的文件。</p>
+</li>
+<li><p>文件修改后，提交git仓库 三步走  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add xxx      //xxx 表示文件名 ( git add . 表示添加所有文件 )  表示添加文件到仓库 </span><br><span class="line"></span><br><span class="line">git commit -m &apos;优化图片上传代码&apos;  // 文件提交到仓库，并且带上本次提交的日志信息，方便之后查看历史记录以及版本恢复</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<ol start="4">
+<li>查看本仓库下文件的修改情况和 提交情况<blockquote>
+<p><strong><em>git status</em></strong> 如果有文件修改没有 添加 和 提交到 仓库 那么会有提示信息</p>
+</blockquote>
+</li>
+</ol>
+<ol start="5">
+<li>查看文件的具体修改情况<blockquote>
+<p><strong><em>git diff xxx</em></strong></p>
+</blockquote>
+</li>
+</ol>
+<ol start="6">
+<li><p>多次提交之后，想要查看历史提交的记录以及回退</p>
+<blockquote>
+<p><strong><em>git log –pretty=oneline</em></strong><br><img src="/images/Snipaste_2019-06-14_23-11-14.png" alt="历史记录"><br>前面的sha1算法生成的唯一id，HEAD标记当前版本库的所在状态</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">版本回退</span><br><span class="line"></span><br><span class="line">git reset --hard bd9efa // 回到上一个版本，回到过去</span><br><span class="line"></span><br><span class="line">穿越未来，如果回到过去版本，又想回来现在，那么</span><br><span class="line">git reflog  显示所有的版本id</span><br><span class="line">git reset --hard xxxx // xxx是版本id，不用写全，一般前几位就可以</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>工作区和版本库 – 概念<br><a href="https://www.liaoxuefeng.com/wiki/896043488029600/897271968352576" target="_blank" rel="noopener">工作区和版本库</a></p>
+</li>
+</ol>
+<blockquote>
+<p>工作区  git add ====&gt;  暂存区  git commit =====&gt;    主分区</p>
+</blockquote>
+<ol start="8">
+<li>文件修改回退操作   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">文件的回退操作 根据文件的状态 git status</span><br><span class="line"></span><br><span class="line">1. 文件修该了，目前状态在工作区，没有git add</span><br><span class="line">   git checkout -- test.js // 直接撤销修改</span><br><span class="line"></span><br><span class="line">2. 文件已经在git add操作过，在暂存区 </span><br><span class="line">   git reset HEAD test.js  // 将该文件修改从暂存区 踢出去到 工作区</span><br><span class="line">   git checkout -- test.js // 撤销修改</span><br><span class="line"></span><br><span class="line">3. 文件修改过，且git commit 了，那么只能版本库回退了</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="3-远程仓库"><a href="#3-远程仓库" class="headerlink" title="3 远程仓库"></a>3 远程仓库</h2><blockquote>
+<p>本地的仓库可以和远程仓库关联同步，这样远程仓库就可以作为一个中心库<br><img src="/images/Snipaste_2019-06-15_00-09-30.png" alt="远程仓库同步"></p>
+</blockquote>
+<h2 id="4-分支管理"><a href="#4-分支管理" class="headerlink" title="4 分支管理"></a>4 分支管理</h2><blockquote>
+<p>git的分支功能非常灵活而且高效，推荐多使用分支开发</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">基本流程</span><br><span class="line">1. 新需求， 开一个新分支，开发完后合并到dev分支，</span><br><span class="line">2. 该bug,  开一个bug分支， 改完后合并到dev</span><br><span class="line">....</span><br><span class="line"></span><br><span class="line">分支的开销很小</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>分支的创建 和 合并</li>
+</ol>
+<blockquote>
+<p>Git 仓库初始状态只有一master 主分支， 每次提交会形成一条时间线，记录版本，HEAD指针指向当前的版本</p>
+</blockquote>
+<p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/900003767775424" target="_blank" rel="noopener">分支的工作原理</a></p>
+<ol start="2">
+<li>分支的冲突解决<blockquote>
+<p>不同的分支对同一个文件的修改提交有可能会造成 冲突，需要手动修改后再次提交</p>
+</blockquote>
+</li>
+</ol>
+<ol start="3">
+<li>分支的合并，默认是快速模式，这样合并后，分支的信息会丢失</li>
+</ol>
+<blockquote>
+<p>git merge –no-ff 普通模式 保留分支信息</p>
+</blockquote>
+<ol start="4">
+<li><p>bug分支</p>
+<blockquote>
+<p>当你正在开发时，需要在创建一个bug分支来修改某个bug，但是你的开发还没完成，暂时不能commit， git stash 将现在的开发储存起来，之后在恢复<br><a href="https://www.liaoxuefeng.com/wiki/896043488029600/900388704535136" target="_blank" rel="noopener">stash操作</a></p>
+</blockquote>
+</li>
+<li><p>feature分支</p>
+<blockquote>
+<p>添加新功能的时候，不想把master分支搞乱掉，所有新建分支来做是比较好的方式。如果不想开发完后又不想要了，那么不合并就删除,git会发出警告</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="5-版本发布"><a href="#5-版本发布" class="headerlink" title="5 版本发布"></a>5 版本发布</h2><blockquote>
+<p>打包发布一个版本时，给版本库一个标签号tag,用来追溯发布历史，是非要有效的。默认打标签就是在最近的一次commit上</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git tag v1.x    // 默认打标签就是在最近的一次commit 上</span><br><span class="line"></span><br><span class="line">git tag v1.2 f52c633 //对之前的一次commit 打标签</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>标签打错了，可以删除 git tag -de v1.0</p>
+</li>
+<li><p>推送本地标签 git push origin v1.0</p>
+</li>
+<li><p>推送所有 git push origin –tags</p>
+</li>
+<li><p>本地和远程删除标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git tag -d v0.9</span><br><span class="line">git push origin :refs/tags/v0.9</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="6-git-忽略文件"><a href="#6-git-忽略文件" class="headerlink" title="6 git 忽略文件"></a>6 git 忽略文件</h2><ol>
+<li>项目的一些配置文件，包括编译文件，是不需要被git管理的，配置.gitignore</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># Windows:</span><br><span class="line">Thumbs.db</span><br><span class="line">ehthumbs.db</span><br><span class="line">Desktop.ini</span><br><span class="line"></span><br><span class="line"># Python:</span><br><span class="line">*.py[cod]</span><br><span class="line">*.so</span><br><span class="line">*.egg</span><br><span class="line">*.egg-info</span><br><span class="line">dist</span><br><span class="line">build</span><br><span class="line"></span><br><span class="line"># My configurations:</span><br><span class="line">db.ini</span><br><span class="line">deploy_key_rsa</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-git-命令配置别名"><a href="#7-git-命令配置别名" class="headerlink" title="7 git 命令配置别名"></a>7 git 命令配置别名</h2><blockquote>
+<p>git 命令太长容易敲错，可以添加别名</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">//配置别名</span><br><span class="line">git config --global alias.xx commit </span><br><span class="line"></span><br><span class="line">//查看全局配置</span><br><span class="line">git config -l</span><br><span class="line"></span><br><span class="line">//</span><br><span class="line"></span><br><span class="line">alias.s=status  // </span><br><span class="line">alias.a=!git add . &amp;&amp; git status</span><br><span class="line">alias.au=!git add -u . &amp;&amp; git status</span><br><span class="line">alias.aa=!git add . &amp;&amp; git add -u . &amp;&amp; git status</span><br><span class="line">alias.c=commit</span><br><span class="line">alias.cm=commit -m</span><br><span class="line">alias.ca=commit --amend</span><br><span class="line">alias.ac=!git add . &amp;&amp; git commit</span><br><span class="line">alias.acm=!git add . &amp;&amp; git commit -m</span><br><span class="line">alias.l=log --graph --all --pretty=format:&apos;%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset&apos;</span><br><span class="line">alias.ll=log --stat --abbrev-commit</span><br><span class="line">alias.lg=log --color --graph --pretty=format:&apos;%C(bold white)%h%Creset -%C(bold green)%d%Creset %s %C(bold green)(%cr)%Creset %C(bold blue)&lt;%an&gt;%Creset&apos; --abbrev-commit --date=relative</span><br><span class="line">alias.llg=log --color --graph --pretty=format:&apos;%C(bold white)%H %d%Creset%n%s%n%+b%C(bold blue)%an &lt;%ae&gt;%Creset %C(bold green)%cr (%ci)&apos; --abbrev-commit</span><br><span class="line">alias.d=diff</span><br><span class="line">alias.master=checkout master</span><br><span class="line">alias.spull=svn rebase</span><br><span class="line">alias.spush=svn dcommit</span><br><span class="line">alias.alias=!git config --list | grep &apos;alias\.&apos; | sed &apos;s/alias\.\([^=]*\)=\(.*\)/\1\     =&gt; \2/&apos; | sort</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-git服务器搭建"><a href="#8-git服务器搭建" class="headerlink" title="8 git服务器搭建"></a>8 git服务器搭建</h2><blockquote>
+<p>github是开源的公开的，商业项目应该自己搭建一个远程仓库服务器</p>
+</blockquote>
+<p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/899998870925664" target="_blank" rel="noopener">步骤搭建</a></p>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/git/">git</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2019/06/24/html中的图片/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">html中的图片</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2019
+    <span class="footer-author">TechMessage.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>

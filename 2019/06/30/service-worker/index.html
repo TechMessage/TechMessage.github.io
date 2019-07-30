@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="service worker">
+
+
+
+
+  <meta name="keywords" content="js,">
+
+
+
+
+
+  <link rel="alternate" href="/default" title="null">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1">
+
+
+
+<link rel="canonical" href="https://techmessage.github.io/2019/06/30/service-worker/">
+
+
+<meta name="description" content="web worker web workder 是一种简单的方式来执行脚本(在主线程之外)，worker线程可以执行一些任务而不会影响到用户的的交互，因为worker不是在主js线程执行的。   workder的执行上下文环境是 DedicatedWorkerGlobalScope或者SharedWorkerGlobalScope，不是window。 在worker线程你可以执行任意的代码，除了不能">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="service worker">
+<meta property="og:url" content="https://techmessage.github.io/2019/06/30/service-worker/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="web worker web workder 是一种简单的方式来执行脚本(在主线程之外)，worker线程可以执行一些任务而不会影响到用户的的交互，因为worker不是在主js线程执行的。   workder的执行上下文环境是 DedicatedWorkerGlobalScope或者SharedWorkerGlobalScope，不是window。 在worker线程你可以执行任意的代码，除了不能">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-26T00:56:10.292Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="service worker">
+<meta name="twitter:description" content="web worker web workder 是一种简单的方式来执行脚本(在主线程之外)，worker线程可以执行一些任务而不会影响到用户的的交互，因为worker不是在主js线程执行的。   workder的执行上下文环境是 DedicatedWorkerGlobalScope或者SharedWorkerGlobalScope，不是window。 在worker线程你可以执行任意的代码，除了不能">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> service worker -  </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo"></a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          service worker
+        
+      </h1>
+
+      <time class="post-time">
+          Jun 30 2019
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h2 id="web-worker"><a href="#web-worker" class="headerlink" title="web worker"></a>web worker</h2><blockquote>
+<p>web workder 是一种简单的方式来执行脚本(在主线程之外)，worker线程可以执行一些任务而不会影响到用户的的交互，因为worker不是在主js线程执行的。</p>
+</blockquote>
+<blockquote>
+<p>workder的执行上下文环境是 DedicatedWorkerGlobalScope或者SharedWorkerGlobalScope，不是window。 在worker线程你可以执行任意的代码，除了不能操作dom,也不能使用window下的属性和方法，毕竟上下文环境不是window</p>
+</blockquote>
+<blockquote>
+<p>在主js线程和worker线程之间数据的传输是通过message system(消息系统)， 通过postMessage()方法来传递数据，通过onmessage 事件来监听消息。</p>
+</blockquote>
+<blockquote>
+<p>worker 反过来也可以 生成新的worder,只要这些worker是被通过一个父页面的管理的同源的。通过worker是可以使用ajax来做network的请求的</p>
+</blockquote>
+<h2 id="dedicated-workders"><a href="#dedicated-workders" class="headerlink" title="dedicated workders"></a>dedicated workders</h2><blockquote>
+<p>dedicated worker(专一 worker), 这种worker只能在它的执行脚本中访问它本身，其它脚本不能访问。</p>
+</blockquote>
+<blockquote>
+<p>share worker</p>
+</blockquote>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/js/">js</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2019/07/03/vue-cli3-x/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">vue-cli3.x</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2019/06/29/图片的分类/">
+        <span class="next-text nav-default">图片的分类</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2019
+    <span class="footer-author">TechMessage.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>

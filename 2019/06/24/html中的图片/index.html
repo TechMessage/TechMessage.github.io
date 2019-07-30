@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang>
+  <head><meta name="generator" content="Hexo 3.9.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+  <meta name="description" content="html中的图片">
+
+
+
+
+  <meta name="keywords" content="css,">
+
+
+
+
+
+  <link rel="alternate" href="/default" title="null">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1">
+
+
+
+<link rel="canonical" href="https://techmessage.github.io/2019/06/24/html中的图片/">
+
+
+<meta name="description" content="img 标签 在html中,img元素是 属于replaced element(简称re)的一种, replaced element 元素是一种表现不完全受css控制的元素。简而言之，这些元素本身的样式，位置可以通过css控制，但是元素的内容却不受css的影响。以img元素为例，img这个元素在html文档中的大小，位置，等等可以通过css控制，但是img的内容就是加载的图片内容是不受css的影响">
+<meta name="keywords" content="css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html中的图片">
+<meta property="og:url" content="https://techmessage.github.io/2019/06/24/html中的图片/index.html">
+<meta property="og:site_name">
+<meta property="og:description" content="img 标签 在html中,img元素是 属于replaced element(简称re)的一种, replaced element 元素是一种表现不完全受css控制的元素。简而言之，这些元素本身的样式，位置可以通过css控制，但是元素的内容却不受css的影响。以img元素为例，img这个元素在html文档中的大小，位置，等等可以通过css控制，但是img的内容就是加载的图片内容是不受css的影响">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://techmessage.github.io/images/Snipaste_2019-06-24_11-14-58.png">
+<meta property="og:updated_time" content="2019-07-26T00:56:10.292Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="html中的图片">
+<meta name="twitter:description" content="img 标签 在html中,img元素是 属于replaced element(简称re)的一种, replaced element 元素是一种表现不完全受css控制的元素。简而言之，这些元素本身的样式，位置可以通过css控制，但是元素的内容却不受css的影响。以img元素为例，img这个元素在html文档中的大小，位置，等等可以通过css控制，但是img的内容就是加载的图片内容是不受css的影响">
+<meta name="twitter:image" content="https://techmessage.github.io/images/Snipaste_2019-06-24_11-14-58.png">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
+  
+
+
+
+    <title> html中的图片 -  </title>
+  </head>
+
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo"></a>
+    </h1>
+
+    <nav id="nav-top">
+        
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        
+  </nav>
+</div>
+
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          html中的图片
+        
+      </h1>
+
+      <time class="post-time">
+          Jun 24 2019
+      </time>
+    </header>
+
+
+
+    
+            <div class="post-content">
+            <h2 id="img-标签"><a href="#img-标签" class="headerlink" title="img 标签"></a>img 标签</h2><blockquote>
+<p>在html中,img元素是 属于replaced element(简称re)的一种, replaced element 元素是一种<strong>表现</strong>不完全受css控制的元素。简而言之，这些元素本身的样式，位置可以通过css控制，但是元素的<strong>内容</strong>却不受css的影响。以img元素为例，img这个元素在html文档中的大小，位置，等等可以通过css控制，但是img的内容就是加载的图片内容是不受css的影响的。</p>
+</blockquote>
+<blockquote>
+<p>css3 中有两个属性 object-fit / object-position 是用来处理replaced element 内容的表现，前者控制缩放，后者控制位置。</p>
+</blockquote>
+<h2 id="object-fit"><a href="#object-fit" class="headerlink" title="object-fit"></a>object-fit</h2><blockquote>
+<p>该属性是用来表示 re元素的内容的 长宽如何适应 re元素本身。</p>
+</blockquote>
+<blockquote>
+<p>以img元素为例说明:</p>
+</blockquote>
+<ol>
+<li>object-fit:fill; // 图片填充整个img区域，图片本身长宽比和img长宽比不一致时，图片做拉伸处理，结果就是图片本身的长宽比有可能变化。</li>
+</ol>
+<ol start="2">
+<li><p>object-fit:contain; // 图片本身保持自身的长宽比，同时要在img容器中显示全部的图片内容，有可能图片就会缩放。</p>
+</li>
+<li><p>object-fit:cover; // 图片在保持自身长宽比的同时，填充满整个img的content-box区域，为此，图片有可能会缩放，那么超出content-box的部分就被修剪</p>
+</li>
+</ol>
+<h2 id="object-positioin"><a href="#object-positioin" class="headerlink" title="object-positioin"></a>object-positioin</h2><blockquote>
+<p>该属性是用来设置re元素内容相对于content-box 的位置， 值为 position 的数据类型。<br><img src="/images/Snipaste_2019-06-24_11-14-58.png" alt="position"></p>
+</blockquote>
+<h2 id="实例应用"><a href="#实例应用" class="headerlink" title="实例应用"></a>实例应用</h2><blockquote>
+<p>在微信公众号开发中，有个需求是利用wx-jssdk提供的图片api来调用手机的相册获取手机中的图片，添加到页面中并且提供本地预览的jsapi接口，可以直接本地预览图片。</p>
+</blockquote>
+<blockquote>
+<p>具体做法:</p>
+<ol>
+<li>因为手机中的图片长宽都不确定的，而且如果是调用手机摄像头拍照，有横拍竖拍等等，总之图片规格尺寸不一。</li>
+<li>wx-jssdk提供的选择手机图片的接口，是返回一个id值，这个id直接复制给img的src就可以预览图片，所以img元素的长宽是固定的，为了使图片显示不拉伸变形覆盖全部的content-box。</li>
+<li>object-fit:cover; object-position:center;</li>
+</ol>
+</blockquote>
+
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+		<div class="post-tags">
+		  
+			<a href="/tags/css/">css</a>
+		  
+		</div>
+		
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2019/06/29/图片的分类/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">图片的分类</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2019/06/20/git-使用简明教程/">
+        <span class="next-text nav-default">git 使用简明教程</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
+  </article>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2019
+    <span class="footer-author">TechMessage.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
+
+
+    
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
+
+  </body>
+</html>
